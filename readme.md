@@ -1,8 +1,8 @@
 # Diagnosing Pneumonia Using AI
 
-<a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Diagnosing_Pneumonia_Blog.pdf">Blog</a>
-<a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Clinical%20Case%20of%20Pneumonia.pdf">| Presentation</a>
-<a href="https://github.com/ariavathlete/pneumonia_diagnosis">| Video</a>
+<a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Diagnosing_Pneumonia_Blog.pdf">BLOG</a>
+<a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Clinical%20Case%20of%20Pneumonia.pdf">| PRESENTATION</a>
+<a href="https://github.com/ariavathlete/pneumonia_diagnosis">| VIDEO</a>
 
   <img src='images/xxx.PNG' width='80%'/>
 
