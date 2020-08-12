@@ -2,7 +2,7 @@
 
 <a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Diagnosing_Pneumonia_Blog.pdf"> Blog </a>
 <a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Clinical%20Case%20of%20Pneumonia.pdf"> Presentation </a>
-<a href="https://drive.google.com/file/d/132X3UY9H_6BgXfvcBY1MgIdgHzgqQWP-/view?usp=sharing"> Video Recording </a>
+<a href="https://github.com/ariavathlete/pneumonia_diagnosis"> Video Recording </a>
 
   <img src='images/xxx.PNG' width='80%'/>
 
