@@ -5,7 +5,7 @@
 "> Presentation </a>
 <a href="https://drive.google.com/file/d/132X3UY9H_6BgXfvcBY1MgIdgHzgqQWP-/view?usp=sharing"> Video Recording </a>
 
-<img src='images/xxx.png' width='80%'/>
+  <img src='images/xxx.PNG' width='80%'/>
 
 # Table Of Contents
 * [Purpose](#purpose)
@@ -32,13 +32,13 @@ The purpose of this research is to build a classifier that can correctly diagnos
 
    * In the United States, the death rate of pneumonia is 10 out of every 100,000 individuals and this usually the rate in most developed countries. Meanwhile, in Africa, the death rate of pneumonia is 100 out of every 100,000 individuals and this is normal in most developing countries.
 
-   <img src='images/timeline.png' width='80%'/>
+   <img src='images/timeline.PNG' width='80%'/>
 
 ## Data Description
 For this research, I used the Pneumonia dataset from Kaggle’s website. It consisted of about 5000 x-ray images of pediatric patient which were labeled by a specialist as either Normal or Pneumonia. 
 
 ## Data Proportion
-  <img src='/images/kaggle.png' width='80%'/>
+  <img src='/images/kaggle.PNG' width='80%'/>
 
 ## Data Augmentation
 The data was heavy imbalanced so I'll use ImageDataGenerator to create additional dataset to help our modeling training. This will allow the network to see more diversification withing the dataset without any reduction in how representative the dataset for each category is during training. I won’t do the same for the test dataset as I won’t want to tamper with the data that I’ll be validating with. My parameters here are; a re-scale value of 1/255, a shear range of 0.2, a zoom range of 0.2, and I set the horizontal flip to True. 
@@ -58,15 +58,15 @@ The accuracy is 91 % and this is the amount of time the predicted result is actu
 
 The recall percentage is 90% and this is the probability of the model diagnosing a correct positive diagnosis out of all the times it diagnosed positive. This would be the best metric in this case as we would rather give a wrong positive diagnosis than give a wrong negative diagnosis.
  
-<img src='images/cm.png' width='80%'/>
+  <img src='images/cm.PNG' width='80%'/>
 
 The model loss is 0.2 out and this is the amount the model penalizes for incorrect predictions ~ 10%
 
-<img src='images/loss.png' width='80%'/>
+  <img src='images/loss.PNG' width='80%'/>
 
 The AUC score is 0.89 and this is the average probability that the model can diagnose each X-ray image correctly.
 
-<img src='images/roc.png' width='80%'/>
+  <img src='images/roc.PNG' width='80%'/>
 
 
 ### Recommendation
