@@ -86,11 +86,11 @@ The recall percentage is 95% and this is the probability of the model diagnosing
  
   <img src='images/cm_pne.PNG' width='80%'/>
 
-The model loss is 0.2 out and this is the amount the model penalizes for incorrect predictions ~ 10%
+The model loss is 0.14 out and this is the amount the model penalizes for incorrect predictions ~ 10%
 
   <img src='images/loss_pne.PNG' width='80%'/>
 
-The AUC score is 0.89 and this is the average probability that the model can diagnose each X-ray image correctly.
+The AUC score is 0.94 and this is the average probability that the model can diagnose each X-ray image correctly.
 
   <img src='images/roc_pne.PNG' width='80%'/>
 
