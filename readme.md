@@ -3,7 +3,7 @@
 <a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Clinical%20Case%20of%20Pneumonia.pdf">PRESENTATION</a>
 <a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Diagnosing_Pneumonia_Blog.pdf">| BLOG</a>
 
-  <img src='images/xxx.PNG' width='80%'/>
+  <img src='images/blue.PNG' width='80%'/>
 
 # Table Of Contents
 * [Purpose](#purpose)
@@ -39,36 +39,64 @@ For this research, I used the Pneumonia dataset from Kaggle’s website. It cons
   <img src='/images/kaggle.PNG' width='80%'/>
 
 ## Data Augmentation
-The data was heavy imbalanced so I'll use ImageDataGenerator to create additional dataset to help our modeling training. This will allow the network to see more diversification withing the dataset without any reduction in how representative the dataset for each category is during training. I won’t do the same for the test dataset as I won’t want to tamper with the data that I’ll be validating with. My parameters here are; a re-scale value of 1/255, a shear range of 0.2, a zoom range of 0.2, and I set the horizontal flip to True. 
+The data was imbalanced so I'll use ImageDataGenerator to create additional dataset to help our modeling training. This will allow the network to see more diversification withing the dataset without any reduction in how representative the dataset for each category is during training. I won’t do the same for the test dataset as I won’t want to tamper with the data that I’ll be validating with. My parameters here are;
 
-After that, I inserted some images using flow from directly. My parameters are; 32 images should be used for training at a given instance (batch size), my image size is 224 X 224 and the class mode is set to categorical. 
+* shear_range=0.2
+* rotation_range=20
+* width_shift_range=0.2
+* height_shift_range=0.2
+* horizontal_flip=True
+* vertical_flip=False
+* zoom_range=0.2
 
-I go on and apply the same parameters I used for my training dataset to my test dataset and then I call my fit generator.  
+After that, I inserted the images using flow. My parameters are; 32 images should be used for training at a given instance (batch size), my image size is 64 X 64 and the class mode is set to categorical.
+
+#### ModelCheckpoint
+* monitor = val_loss
+* mode = min
+* save_best_only = True
+* verbose = 1
+
+#### EarlyStopping
+* monitor = val_loss
+* mode = min
+* save_best_only = True
+* verbose= 1
+
+#### ReduceLROnPlateau
+* monitor = val_loss
+* patience = 30
+* verbose = 1 
+* factor = 0.8
+* min_lr = 0.0001
+* mode = auto
+* min_delta = 0.0001
+* cooldown = 5
+
+I go on and apply the same parameters I used for my training dataset to my test dataset and then I call my fit 100 epochs.
 
 
 ## [Modelling](./pneumonia_classifier.ipynb)
-The network used is VGG16 because it’s known for having pretty high accuracies for image classification problems so I have no doubt it would work perfectly for my problem. 
-After importing my VGG16 model and set the appropriate weights for the type of images in the dataset and set the Include Top parameter to false.
-This will ensure that the last layer is drop and I did this because I don’t want to classify thousand different categories when my specific problem only has two categories. So, for this I skip the last layer. The first layer is also dropped since I can simply provide my own image size as I did.
+The network used is VGG19 because it’s known for having pretty high accuracies for image classification problems so I have no doubt it would work perfectly for my problem. After importing my VGG19 model and set the appropriate weights for the type of images in the dataset and set the Include Top parameter to false. This will ensure that the last layer is drop and I did this because I don’t want to classify thousand different categories when my specific problem only has two categories. So, for this I skip the last layer. The first layer is also dropped since I can simply provide my own image size as I did.
 
 ## Interpretion
-The accuracy is 91 % and this is the amount of time the predicted result is actually correct.
+The accuracy is 95 % and this is the amount of time the predicted result is actually correct.
 
-The recall percentage is 90% and this is the probability of the model diagnosing a correct positive diagnosis out of all the times it diagnosed positive. This would be the best metric in this case as we would rather give a wrong positive diagnosis than give a wrong negative diagnosis.
+The recall percentage is 95% and this is the probability of the model diagnosing a correct positive diagnosis out of all the times it diagnosed positive. This would be the best metric in this case as we would rather give a wrong positive diagnosis than give a wrong negative diagnosis.
  
-  <img src='images/cm.PNG' width='80%'/>
+  <img src='images/cm_pne.PNG' width='80%'/>
 
 The model loss is 0.2 out and this is the amount the model penalizes for incorrect predictions ~ 10%
 
-  <img src='images/loss.PNG' width='80%'/>
+  <img src='images/loss_pne.PNG' width='80%'/>
 
 The AUC score is 0.89 and this is the average probability that the model can diagnose each X-ray image correctly.
 
-  <img src='images/roc.PNG' width='80%'/>
+  <img src='images/roc_pne.PNG' width='80%'/>
 
 
 ### Recommendation
-The recall score will be the main metric for this project since it’s the most important metric in medical problems given that - doctors will rather make a wrong positive diagnosis than make a wrong negative. 
+The recall score will be the main metric for this project since it’s the most important metric in medical problems given that - doctors will rather make a wrong positive diagnosis than make a wrong negative.
 
 Health professionals are welcomed to integrate this model, after thorough verification, into their medical software to help them correctly diagnose pneumonia.
 
