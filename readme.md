@@ -3,7 +3,7 @@
 <a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Clinical%20Case%20of%20Pneumonia.pdf">PRESENTATION</a>
 <a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Diagnosing_Pneumonia_Blog.pdf">| BLOG</a>
 
-  <img src='images/blue.PNG' width='80%'/>
+  <img src='images/blue.PNG' width='50%'/>
 
 # Table Of Contents
 * [Purpose](#purpose)
@@ -84,15 +84,15 @@ The accuracy is 95 % and this is the amount of time the predicted result is actu
 
 The recall percentage is 95% and this is the probability of the model diagnosing a correct positive diagnosis out of all the times it diagnosed positive. This would be the best metric in this case as we would rather give a wrong positive diagnosis than give a wrong negative diagnosis.
  
-  <img src='images/cm_pne.PNG' width='80%'/>
+  <img src='images/cm_pne.PNG' width='50%'/>
 
 The model loss is 0.14 out and this is the amount the model penalizes for incorrect predictions ~ 10%
 
-  <img src='images/loss_pne.PNG' width='80%'/>
+  <img src='images/loss_pne.PNG' width='50%'/>
 
 The AUC score is 0.94 and this is the average probability that the model can diagnose each X-ray image correctly.
 
-  <img src='images/roc_pne.PNG' width='80%'/>
+  <img src='images/roc_pne.PNG' width='50%'/>
 
 
 ### Recommendation
