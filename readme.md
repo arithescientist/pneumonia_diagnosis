@@ -8,9 +8,9 @@
 # Table Of Contents
 * [Purpose](#purpose)
 * [Data Description](#data-description)
-* [Data Proportion](#data-proportion)
 * [Data Augmentaion](#data-augmentation)
 * [Model](#model)
+* [Interpretion](#interpretion)
 * [Recommendation](#recommendation)
 * [Future Work](#future-work)
   
@@ -97,7 +97,6 @@ The AUC score is 0.94 and this is the average probability that the model can dia
 The recall score will be the main metric for this project since it’s the most important metric in medical problems given that - doctors will rather make a wrong positive diagnosis than make a wrong negative.
 
 Health professionals are welcomed to integrate this model, after thorough verification, into their medical software to help them correctly diagnose pneumonia.
-
 
 
 # Future Work
