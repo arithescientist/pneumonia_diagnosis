@@ -94,9 +94,11 @@ The AUC score is 0.94 and this is the average probability that the model can dia
 
 
 ### Recommendation
-The recall score will be the main metric for this project since it’s the most important metric in medical problems given that - doctors will rather make a wrong positive diagnosis than make a wrong negative.
+* Reshape the x-ray sizes to 64 x 64 to reduce the amount of computational time and power consumed when using the VGG19 model.
 
-Health professionals are welcomed to integrate this model, after thorough verification, into their medical software to help them correctly diagnose pneumonia.
+* Use a maxpooling layer before flatten the model and using a dense layer of 512 and also a learning rate of 0.000800000037997961 in order to get a better performing model when using the VGG19 model.
+
+* Add a dropout layer before the final dense layer to dropout half of the output from the prior dense layer using 512 nodes in order to reduce overfitting when using the VGG19 model.
 
 
 # Future Work
