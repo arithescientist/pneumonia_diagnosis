@@ -34,6 +34,7 @@ The purpose of this research is to build a classifier that can correctly diagnos
 
 ## Data Description
 For this research, I used the Pneumonia dataset from Kaggle’s website. I used 2,682 x-ray images of patient which were labeled by a specialist as either Normal or Pneumonia. The merged dataset file can be found in the xray folder of this repository. The datasets downloaded can be found: https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+  
   <img src='/images/kaggle.PNG' width='80%'/>
 
 ## Data Augmentation
