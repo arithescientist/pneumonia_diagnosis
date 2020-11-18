@@ -2,6 +2,7 @@
 
 <a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Clinical%20Case%20of%20Pneumonia.pdf">PRESENTATION</a>
 <a href="https://github.com/ariavathlete/pneumonia_diagnosis/blob/master/Diagnosing_Pneumonia_Blog.pdf">| BLOG</a>
+<a href="https://drive.google.com/file/d/1sjpbPQ25aKCVvpkw1ZU9cJrYNMedYTo0/view?usp=sharing">| VIDEO WALKTHROUGH</a>
 
   <img src='images/blue.PNG' width='50%'/>
 
