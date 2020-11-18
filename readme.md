@@ -79,7 +79,7 @@ I go on and apply the same parameters I used for my training dataset to my test 
 The network used is VGG19 because it’s known for having pretty high accuracies for image classification problems so I have no doubt it would work perfectly for my problem. After importing my VGG19 model and set the appropriate weights for the type of images in the dataset and set the Include Top parameter to false. This will ensure that the last layer is drop and I did this because I don’t want to classify thousand different categories when my specific problem only has two categories. So, for this I skip the last layer. The first layer is also dropped since I can simply provide my own image size as I did.
 
 ## Interpretion
-The accuracy is 95 % and this is the amount of time the predicted result is actually correct.
+The accuracy is 94 % and this is the amount of time the predicted result is actually correct.
 
 The recall percentage is 95% and this is the probability of the model diagnosing a correct positive diagnosis out of all the times it diagnosed positive. This would be the best metric in this case as we would rather give a wrong positive diagnosis than give a wrong negative diagnosis.
  
@@ -89,18 +89,15 @@ The model loss is 0.17 out and this is the amount the model penalizes for incorr
 
   <img src='images/loss_pne.PNG' width='90%'/>
 
-The AUC score is 0.95 and this is the average probability that the model can diagnose each X-ray image correctly.
+The AUC score is 0.90 and this is the average probability that the model can diagnose each X-ray image correctly.
 
   <img src='images/roc_pne.PNG' width='50%'/>
 
 
 ### Recommendation
-* Reshape the x-ray sizes to 64 x 64 to reduce the amount of computational time and power consumed when using the VGG19 model.
+* Use the vgg-19 model since it shows its 5% better at correctly diagnosing a pneumonia than the seqiential model.
 
-* Use a maxpooling layer before flatten the model and using a dense layer of 512 and also a learning rate of 0.000800000037997961 in order to get a better performing model when using the VGG19 model.
-
-* Add a dropout layer before the final dense layer to dropout half of the output from the prior dense layer using 512 nodes in order to reduce overfitting when using the VGG19 model.
-
+* Add a dropout layer before the final dense layer in order to reduce overfitting when using the VGG19 model.
 
 # Future Work
    * Other Lung Diseases: Create a classifier to differentiate pneumonia x-rays from other lung infections like COVID-19,  Tuberculosis, etc.
