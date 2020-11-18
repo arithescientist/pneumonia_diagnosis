@@ -85,7 +85,7 @@ The recall percentage is 95% and this is the probability of the model diagnosing
  
   <img src='images/cm_pne.PNG' width='50%'/>
 
-The model loss is 0.17 out and this is the amount the model penalizes for incorrect predictions ~ 10%
+The model loss is 0.17 out and this is the amount the model penalizes for incorrect predictions.
 
   <img src='images/loss_pne.PNG' width='90%'/>
 
